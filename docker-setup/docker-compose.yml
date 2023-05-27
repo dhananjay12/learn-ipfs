@@ -7,7 +7,7 @@ services:
       - ./ipfs-staging:/export
       - ./ipfs-data:/data/ipfs
     ports:
-      #- 4001:4001 #4001 - P2P TCP/QUIC transports
-      #- 4001:4001/udp
+      - 4001:4001 #4001 - P2P TCP/QUIC transports
+      - 4001:4001/udp
       - 8080:8080 #8080 - HTTP Gateway
       - 5001:5001 #5001 RPC API , The API port provides admin-level access to your IPFS node
